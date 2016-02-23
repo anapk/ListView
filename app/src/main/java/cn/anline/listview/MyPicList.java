@@ -43,7 +43,7 @@ public class MyPicList extends ListActivity {
     private String[] mStr = {
             "文言文，作文，端午，高考零分作文，笑话大王，诗歌，屈原",
             "函数，算法，人生几何，算术题，线性函数，技术支持",
-            "Hello AndroidListView.I Should be King,the Lead",
+            "Hello Anline.I Should be King,the Lead",
             "导航，海拔，地震，海啸，污水处理，计算位置，七大洲，四大洋",
             "宇宙，爱因斯坦，相对论，加速度，万有引力，引力波，冲击波，光线路",
             "细胞，基因分离，基因突变，传染病，遗传病，基因重组，细胞我呢行",
