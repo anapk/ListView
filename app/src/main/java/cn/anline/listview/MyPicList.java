@@ -1,9 +1,14 @@
 package cn.anline.listview;
 
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -65,7 +70,30 @@ public class MyPicList extends ListActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"位置："+(position+1)+",标题："+mTitle[position]+",简介："+mStr[position],Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "位置：" + (position + 1) + ",标题：" + mTitle[position] + ",简介：" + mStr[position], Toast.LENGTH_SHORT).show();
+            }
+        });
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                AlertDialog.Builder builder = new Builder(MyPicList.this);
+                  builder.setMessage(mStr[position]);
+                  builder.setTitle(mTitle[position]);
+                  builder.setPositiveButton("确认", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        MyPicList.this.finish();
+                           }
+                      });
+                   builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        }
+                });
+                 builder.create().show();
+                return false;
             }
         });
         super.onCreate(savedInstanceState);
