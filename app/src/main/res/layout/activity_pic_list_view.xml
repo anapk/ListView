@@ -9,4 +9,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cn.anline.listview.PicListView">
 
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:padding="2dp"/>
+    <TextView
+        android:id="@+id/pTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center_vertical"
+        android:textSize="15dip"/>
+    <TextView
+        android:id="@+id/pText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/pic"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="10dip"/>
+
 </RelativeLayout>

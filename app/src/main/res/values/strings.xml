@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ListView</string>
+    <string name="app_name">安浪ListView</string>
+    <string name="info">Power by www.anline.cn 安浪创想科技</string>
 </resources>
